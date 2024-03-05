@@ -1,4 +1,4 @@
-package Lesson17;
+package Lesson17Array;
 
 public class ArrayMaxTask {
     public static void main(String[] args) {

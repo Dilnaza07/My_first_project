@@ -1,4 +1,4 @@
-package Lesson17;
+package Lesson17Array;
 
 public class ArrayExampleTask1 {
     public static void main(String[] args) {
