@@ -1,6 +1,6 @@
-package lesson24_oop_practice;
+package lesson24_25_oop_practice;
 
-import static lesson24_oop_practice.Notebook.showPrint;
+import static lesson24_25_oop_practice.Notebook.showPrint;
 
 public class oop_practiceTask2 {
     public static void main(String[] args) {

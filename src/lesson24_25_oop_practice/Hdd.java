@@ -1,4 +1,4 @@
-package lesson24_oop_practice;
+package lesson24_25_oop_practice;
 
 public class Hdd {
     int size;

@@ -1,8 +1,8 @@
-package lesson24_oop_practice;
+package lesson24_25_oop_practice;
 
-import static lesson24_oop_practice.Notebook.showPrint;
+import static lesson24_25_oop_practice.Notebook.showPrint;
 
-public class oop_practiceTast3_new_disk {
+public class oop_practiceTest {
     public static void main(String[] args) {
         Hdd hdd1 = new Hdd(5, 7);
         Hdd hdd2 = new Hdd(7, 7);
@@ -17,5 +17,6 @@ public class oop_practiceTast3_new_disk {
         Notebook notebook = new Notebook(hddArray, ramArray, osArray, cpu);
 
         showPrint(notebook,hddArray,ramArray,osArray);
+
     }
 }
