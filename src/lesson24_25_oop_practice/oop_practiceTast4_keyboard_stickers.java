@@ -2,7 +2,7 @@ package lesson24_25_oop_practice;
 
 import static lesson24_25_oop_practice.Notebook.showPrint;
 
-public class oop_practiceTest {
+public class oop_practiceTast4_keyboard_stickers {
     public static void main(String[] args) {
         Hdd hdd1 = new Hdd(5, 7);
         Hdd hdd2 = new Hdd(7, 7);
@@ -14,10 +14,13 @@ public class oop_practiceTest {
         Ram[] ramArray = new Ram[]{ram};
         Os [] osArray = new Os[]{os};
 
-        Notebook notebook = new Notebook(hddArray, ramArray, osArray, cpu);
+        char [] keyboardStickers = new char[]{'а','б','в','г','д','е'};
 
-       // showPrint(notebook);
-        System.out.println(notebook);
+        Notebook notebook = new Notebook(hddArray, ramArray, osArray, cpu,keyboardStickers);
 
+       // showPrint2(notebook);
+       // showPrint(null);  ошибка
+
+        System.out.println(notebook.toString());
     }
 }

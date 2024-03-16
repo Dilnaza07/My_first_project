@@ -24,4 +24,10 @@ public class Hdd {
     public int getSpeed() {
         return speed;
     }
+
+    @Override
+    public String toString(){
+        String message = (". Hdd  size: " + getSize() + ", speed: " + getSpeed());
+        return message;
+    }
 }

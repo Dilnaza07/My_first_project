@@ -15,7 +15,7 @@ public class oop_practiceTask2 {
 
         Notebook notebook = new Notebook(hddArray, ramArray, osArray, cpu);
 
-        showPrint(notebook, hddArray, ramArray, osArray);
+        showPrint(notebook);
 
         //заменяем комплектующие ноутбука
 
@@ -39,6 +39,6 @@ public class oop_practiceTask2 {
         System.out.println("Upgrade!");
         System.out.println();
 
-        showPrint(notebook, hddArray, ramArray, osArray);
+        showPrint(notebook);
     }
 }
