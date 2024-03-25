@@ -26,4 +26,10 @@ public class Os {
     public String getName() {
         return name;
     }
+
+    @Override
+    public String toString(){
+       String message = (". Os  name: " + getName() + ", version: " + getVersion());
+               return message;
+    }
 }

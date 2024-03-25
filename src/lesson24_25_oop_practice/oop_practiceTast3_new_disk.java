@@ -16,6 +16,6 @@ public class oop_practiceTast3_new_disk {
 
         Notebook notebook = new Notebook(hddArray, ramArray, osArray, cpu);
 
-        showPrint(notebook,hddArray,ramArray,osArray);
+        showPrint(notebook);
     }
 }

@@ -35,4 +35,9 @@ public class Cpu {
         this.frequency = m;
     }
 
+    @Override
+    public String toString() {
+        String message = ("Cpu model: " + getModel() + ", coreCount: " + getCoreCount() + ", frequency: " + getFrequency());
+        return message;
+    }
 }

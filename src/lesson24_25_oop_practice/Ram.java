@@ -26,4 +26,9 @@ public class Ram {
         return model;
     }
 
+    public String toString(){
+        String message = (". Ram size: " + getSize() + ", model: " + getModel());
+        return message;
+    }
+
 }
