@@ -5,11 +5,13 @@ public class Bread {
     double price;
     String produceCompany;
 
-    Bread(double weight, double price, String produceCompany) {
+  public  Bread(double weight, double price, String produceCompany) {
         this.weight = weight;
         this.price = price;
         this.produceCompany = produceCompany;
     }
+
+
 
     public void setPrice(double price) {
         this.price = price;

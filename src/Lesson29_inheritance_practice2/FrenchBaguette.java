@@ -34,7 +34,7 @@ public class FrenchBaguette extends Bread {
 
     @Override
     void pack(){
-        System.out.println("Хлеб готов");
+        super.pack();
         System.out.println("Только в экологичный пакет");
     }
 

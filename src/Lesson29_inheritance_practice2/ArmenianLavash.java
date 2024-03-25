@@ -35,6 +35,7 @@ public class ArmenianLavash extends Bread{
 
     @Override
     void bake(){
+        super.bake();
         System.out.println("I am lavash. I am baked");
     }
 }

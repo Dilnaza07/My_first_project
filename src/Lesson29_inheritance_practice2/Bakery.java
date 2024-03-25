@@ -8,7 +8,7 @@ public class Bakery {
         System.out.println(bread);
         System.out.println();
 
-        TandoorTortilla tandoorTortilla = new TandoorTortilla(1,2,"UZB",2);
+        TandoorTortilla tandoorTortilla = new TandoorTortilla(0,2,"UZB",2);
         tandoorTortilla.drawPrints();
         tandoorTortilla.bake();
         tandoorTortilla.varnish();
