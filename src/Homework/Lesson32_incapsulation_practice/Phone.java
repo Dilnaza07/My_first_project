@@ -9,6 +9,8 @@ public class Phone {
     double[] dialedNumber;
 
 
+
+
     public Phone(double[] sim1, double[] sim2, double[] dialedNumber) {
         this.sim1 = sim1;
         this.sim2 = sim2;
