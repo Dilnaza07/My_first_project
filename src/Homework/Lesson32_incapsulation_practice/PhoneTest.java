@@ -12,5 +12,7 @@ public class PhoneTest {
         phone.makeCall();
         phone.makeSms();
         phone.useInternet();
+
+     //   Phone2 phone2 = new Phone2("Beelain","0775809030",100,1,1.2,30,"0550900410",)
     }
 }
