@@ -17,15 +17,10 @@ public class ChessBoardDrawing extends Canvas {
         for (int i = 0; i < rectangles.length; i++) {
             for (int j = 0; j < rectangles[i].length; j++) {
                 LocatoinOfFigure locatoinOfFigure = new LocatoinOfFigure(i, j);
-                Rectangle rectangle = new Rectangle(Color.BLACK, locatoinOfFigure, true, 50);
+                Color color= (i+j)%2==0 ? Color.WHITE: Color.BLACK;
+                Rectangle rectangle = new Rectangle(color, locatoinOfFigure, true, 50);
                 chessBoard.fillIn(rectangle, locatoinOfFigure);
                 System.out.println(rectangle.speak());
-
-                if((i+j)%2==0){
-                    rectangle.setColor(Color.WHITE);
-                }else{
-                    rectangle.setColor(Color.BLACK);
-                }
 
                 int x = i * rectangle.getHeight();
                 int y = j * rectangle.getHeight();

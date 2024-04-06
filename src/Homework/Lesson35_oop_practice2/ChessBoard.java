@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class ChessBoard {
 
-    public Rectangle [][] rectangles = new Rectangle[8][8];
+    private  Rectangle [][] rectangles = new Rectangle[8][8];
 
     public ChessBoard(Rectangle[][] rectangles) {
         this.rectangles = rectangles;
@@ -12,7 +12,7 @@ public class ChessBoard {
 
     public final void fillIn(Rectangle rectangle, LocatoinOfFigure locatoinOfFigure){
 
-        this.rectangles[locatoinOfFigure.getX()][locatoinOfFigure.getY()] = rectangle;
+        this.rectangles[rectangle.getLocatoin().getX()][rectangle.getLocatoin().getY()] = rectangle;
     }
 
     public Rectangle getRectangle(int rowNumber, int columnNumber) {
