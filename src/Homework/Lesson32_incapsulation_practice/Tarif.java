@@ -1,10 +1,10 @@
 package Homework.Lesson32_incapsulation_practice;
 
 public class Tarif {
-    String name;
-    double callPrice;
-    double smsPrice;
-    double internetPrice;
+   private String name;
+    private double callPrice;
+    private double smsPrice;
+    private double internetPrice;
 
 
     public Tarif(String name, double callPrice, double smsPrice, double internetPrice) {

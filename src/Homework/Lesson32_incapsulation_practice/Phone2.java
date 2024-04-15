@@ -8,6 +8,10 @@ public class Phone2 {
     SimCard simCard1;
     SimCard simCard2;
 
+    String calledNumber;
+    String myNumber;
+    String tarifOfNumber;
+
     String keyboard = "1,2,3,4,5,6,7,8";
 
     public Phone2(SimCard simCard1, SimCard simCard2) {
@@ -23,13 +27,13 @@ public class Phone2 {
         System.out.println("Телефон включен.");
         System.out.println("Выберите операцию: ");
         System.out.println("1 - включить");
-        System.out.println("2 - выключить");
-        System.out.println("3 - набрать номер");
+
         System.out.println("4 - позвонить");
         System.out.println("5 - отправить смс");
         System.out.println("6 - использовать интернет");
         System.out.println("7 - проверить баланс");
-        System.out.println("8 - сменить сим карту");
+        System.out.println("8 - сменить сим карту");  //новую сим карту
+        System.out.println("2 - выключить");
 
         int num = sc.nextInt();
 
@@ -49,17 +53,21 @@ public class Phone2 {
 
     }
 
-    public void dualNumber(){
-        System.out.println("Введите номер: ");
-    }
+//    public void dualNumber(){
+//        Scanner sc = new Scanner(System.in);
+//        System.out.println("Введите номер: ");
+//        this.calledNumber = sc.next();
+//    }
 
 
     public void makeCall(String calledNumber) {
+        this.calledNumber = calledNumber;
+        getProfitTarifOfCall();
+
 
     }//
 
 
-    //   public void makeSms () {
 
     //  }
 
@@ -67,7 +75,7 @@ public class Phone2 {
 
     //   }
 
-    public void identificationNumber(String calledNumber) {
+    public String identificationNumber(String calledNumber) {
         String numberCode = calledNumber.substring(1, 4);
 
         switch (numberCode) {
@@ -81,7 +89,7 @@ public class Phone2 {
             case "707":
             case "708":
             case "709":
-                numberCode = "1";
+                tarifOfNumber = "1";
                 break;
 
             case "550":
@@ -94,7 +102,7 @@ public class Phone2 {
             case "557":
             case "558":
             case "559":
-                numberCode = "2";
+                tarifOfNumber = "2";
                 break;
 
             case "770":
@@ -107,12 +115,35 @@ public class Phone2 {
             case "777":
             case "778":
             case "779":
-                numberCode = "3";
+                tarifOfNumber = "3";
                 break;
 
             default:
                 System.out.println("Неверно введен номер");
         }
+        return tarifOfNumber;
     }
 
+
+    public void getProfitTarifOfCall() {
+        String calledNumberTarif = identificationNumber(calledNumber);
+        String simkard1Tarif = identificationNumber(simCard1.getMyNumber());
+        String simkard2Tarif = identificationNumber(simCard2.getMyNumber());
+
+        if (simkard1Tarif.equals(calledNumberTarif)) {
+            System.out.println("Выгоднее звонить с симкарты " + simCard1.getTarif().getName() + ", тариф: звонок внутри сети бесплатный");
+
+        } else if (simkard2Tarif.equals(calledNumberTarif)) {
+            System.out.println("Выгоднее звонить с симкарты " + simCard2.getTarif().getName() + ", тариф: звонок внутри сети бесплатный");
+
+        } else if (simCard1.getTarif().getCallPrice() <= simCard2.getTarif().getCallPrice()) {
+            System.out.println("Выгоднее звонить с симкарты " + simCard1.getTarif().getName() + ", тариф: " + simCard1.getTarif().getCallPrice());
+
+        } else if (simCard2.getTarif().getCallPrice() <= simCard1.getTarif().getCallPrice()) {
+            System.out.println("Выгоднее звонить с симкарты " + simCard2.getTarif().getName() + ", тариф: " + simCard2.getTarif().getCallPrice());
+
+        } else {
+            System.out.println("ошибка");
+        }
+    }
 }

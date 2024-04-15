@@ -19,5 +19,8 @@ public class Main {
         System.out.println();
         Chicken chicken = new Chicken();
         Conteiner conteiner = new Conteiner(chicken, turtle);
+
+        System.out.println("Плавает ли? " + Swimable.isSwimable);
+        System.out.println("Максимальная глубина океанов " + Swimable.maximumDepthEarthsOceans);
     }
 }
