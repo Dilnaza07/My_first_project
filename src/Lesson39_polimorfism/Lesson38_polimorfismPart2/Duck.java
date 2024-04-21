@@ -1,4 +1,4 @@
-package Lesson39_polimorfism.Lesson38_polimorfism;
+package Lesson39_polimorfism.Lesson38_polimorfismPart2;
 
 public class Duck implements Voiceable, Swimable {
 
