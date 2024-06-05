@@ -1,4 +1,4 @@
-package Lesson31_modificators;
+package Lesson32_acess_modifiers.library;
 
 public class Book {
 
@@ -57,19 +57,19 @@ public class Book {
         this.pressmark = author.substring(0, 1) + "." + title.substring(0, 1) + "." + pageCount;
     }
 
-    private String getTedBy() {
+     String getTedBy() {
         return tedBy;
     }
 
-    private void setTedBy(String tedBy) {
+     void setTedBy(String tedBy) {
         this.tedBy = tedBy;
     }
 
-    private boolean isNeedsRepair() {
+    protected boolean getNeedsRepair() {
         return needsRepair;
     }
 
-    private void setNeedsRepair(boolean needsRepair) {
+    protected void setNeedsRepair(boolean needsRepair) {
         this.needsRepair = needsRepair;
     }
 
